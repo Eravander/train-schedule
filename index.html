@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Schedule</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+    integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+          <h1 class="fa fa-newspaper-o">Train Schedule</h1>
+          <p class="lead">Enter the requested information below to see when the next train is due.</p>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="card">
+                  <div class="card-header">Current Train Schedule</div>
+                  <div class="card-body">
+                      <table class="table" id="my-table">
+                          <thead>
+                              <tr>
+                                  <th scope="col">Train Name</th>
+                                  <th scope="col">Destination</th>
+                                  <th scope="col">Frequency (min)</th>
+                                  <th scope="col">Next Arrival</th>
+                                  <th scope="col">Minutes Away</th>
+                              </tr>
+                          </thead>
+                          <tbody id="table-body">
+
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+              <div class="card">
+                  <div class="card-header">Add Train
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="form-group">
+                              <label for="train-name">Train Name</label>
+                              <input type="search" class="form-control" id="train-name"
+                                  placeholder="Train Name">
+                          </div>
+                          <div class="form-group">
+                              <label for="destination">Destination</label>
+                              <input type="search" class="form-control" id="destination"
+                                  placeholder="Destination">
+                          </div>
+                          <div class="form-group">
+                              <label for="first-train-time">First Train Time (HH:mm - military time)</label>
+                              <input class="form-control" id="first-train-time" placeholder="13:45">
+                          </div>
+                          <div class="form-group">
+                              <label for="frequency">Frequency (min)</label>
+                              <input type="number" class="form-control" id="frequency"
+                                  placeholder="15">
+                          </div>
+                          <button type="button" class="btn btn-primary" id='submitButton'>Submit</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  <script src="assets/javascript/config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="assets/javascript/logic.js"></script>
+</body>
+</html>
